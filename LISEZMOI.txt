@@ -1,0 +1,25 @@
+POULET DU NDIAMBOUR - boutique en ligne
+
+Ouvrir le site : double-cliquez sur index.html (il s'ouvre dans le navigateur).
+
+Fichiers
+- index.html : le contenu de la page (textes, titres, pied de page)
+- style.css  : les couleurs, les polices et la mise en page
+- script.js  : les produits, le panier et la commande WhatsApp
+- images/    : les photos (remplacez-les par vos propres photos, avec le meme nom)
+
+Modifier les prix et les produits
+Ouvrez script.js. Tout en haut, la liste PRODUCTS contient un produit par ligne :
+  name = nom, desc = description, unit = unite, price = prix en F CFA,
+  cat = "poulet" ou "oeuf", img = "hen", "roast" ou "eggs".
+Pour ajouter un produit, copiez une ligne et changez ses valeurs (id unique).
+
+Changer le numero WhatsApp
+Dans script.js, la ligne  var WA = "221781950353";  (indicatif 221 + numero, sans espaces ni +).
+
+Changer les couleurs
+Dans style.css, les couleurs sont en haut du fichier (--brand, --lime, --hero...).
+
+Mettre le site en ligne
+Envoyez tout le dossier chez un hebergeur de sites statiques (Netlify, Vercel, GitHub Pages...).
+Gardez les fichiers et le dossier images ensemble.

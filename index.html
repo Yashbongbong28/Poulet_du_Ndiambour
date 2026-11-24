@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Poulet du Ndiambour</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Great+Vibes&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#haut" aria-label="Poulet du Ndiambour, accueil">
+      <img src="images/logo.jpg" alt="">
+      <div><b>Poulet du Ndiambour</b><span>Poulets de chair et œufs</span></div>
+    </a>
+    <a class="cartlink" href="#panier" id="cartlink">Panier <span class="n" id="cartcount">0</span></a>
+  </div>
+</header>
+
+<main id="haut">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Poulet</h1>
+        <div class="script">du Ndiambour</div>
+        <p class="lead">Vente de poulets de chair et d’œufs. Choisissez, puis envoyez votre commande sur WhatsApp.</p>
+        <div class="cta">
+          <a class="btn on-hero" href="#produits">Voir les produits</a>
+          <a class="btn ghost" href="#panier">Mon panier</a>
+        </div>
+        <div class="facts">
+          <span><i></i>Quartier Cité Damel</span>
+          <span><i></i>78 195 03 53</span>
+        </div>
+      </div>
+      <figure><img src="images/hen-hero.jpg" alt="Poulet de chair blanc et poulet préparé sur une planche en bois"></figure>
+    </div>
+  </div>
+
+  <section id="produits">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <h2>Nos produits</h2>
+          <p>Poulets de chair vivants ou préparés, œufs au plateau ou en gros.</p>
+        </div>
+        <div class="tabs" role="group" aria-label="Filtrer les produits">
+          <button class="tab" type="button" data-f="all" aria-pressed="true">Tout</button>
+          <button class="tab" type="button" data-f="poulet" aria-pressed="false">Poulets</button>
+          <button class="tab" type="button" data-f="oeuf" aria-pressed="false">Œufs</button>
+        </div>
+      </div>
+      <div class="grid" id="grid"></div>
+      <p class="note">Les prix sont en francs CFA. Pour un poulet vivant ou un gros volume d’œufs, confirmez la disponibilité et le prix du jour sur WhatsApp.</p>
+    </div>
+  </section>
+
+  <section style="background: var(--surface); border-block: 1px solid var(--line);">
+    <div class="wrap">
+      <div class="head"><div><h2>Comment commander</h2></div></div>
+      <ol class="steps">
+        <li><b>Remplissez votre panier</b><span>Ajoutez les poulets et les plateaux d’œufs que vous voulez.</span></li>
+        <li><b>Indiquez vos coordonnées</b><span>Votre nom, votre numéro, retrait sur place ou livraison.</span></li>
+        <li><b>Envoyez sur WhatsApp</b><span>Votre commande est écrite pour vous. Nous confirmons le prix et l’heure.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="panier">
+    <div class="wrap">
+      <div class="head"><div><h2>Votre panier</h2><p>Le paiement se règle avec nous à la remise de la commande.</p></div></div>
+      <div class="cartwrap">
+        <div class="panel">
+          <h3>Articles</h3>
+          <ul class="lines" id="lines"></ul>
+          <div class="sum"><div>Total<small>Livraison à confirmer</small></div><div id="total">0 F CFA</div></div>
+        </div>
+        <div class="panel">
+          <h3>Vos informations</h3>
+          <form id="orderform" novalidate>
+            <div>
+              <label for="nom">Nom</label>
+              <input type="text" id="nom" name="nom" autocomplete="name" placeholder="Ex. Awa Diop">
+            </div>
+            <div>
+              <label for="tel">Téléphone</label>
+              <input type="tel" id="tel" name="tel" autocomplete="tel" placeholder="Ex. 77 000 00 00">
+            </div>
+            <fieldset>
+              <legend>Réception</legend>
+              <div class="radios">
+                <label for="m-retrait"><input type="radio" id="m-retrait" name="mode" value="retrait" checked><span>Retrait à Cité Damel<small>Gratuit</small></span></label>
+                <label for="m-livraison"><input type="radio" id="m-livraison" name="mode" value="livraison"><span>Livraison<small>Frais confirmés sur WhatsApp</small></span></label>
+              </div>
+            </fieldset>
+            <div id="addrbox" hidden>
+              <label for="adresse">Adresse de livraison</label>
+              <textarea id="adresse" name="adresse" placeholder="Quartier, rue, repère"></textarea>
+            </div>
+            <a class="btn wa" id="wa" href="#panier" target="_blank" rel="noopener" aria-disabled="true">Envoyer ma commande sur WhatsApp</a>
+            <p class="hint">WhatsApp s’ouvre avec votre message prêt. Appuyez sur Envoyer pour que la commande nous parvienne.</p>
+            <button class="btn copy" type="button" id="copybtn">Copier le message</button>
+            <p class="status" id="status" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><h4>Adresse</h4><p>Quartier Cité Damel</p></div>
+    <div><h4>Téléphone et WhatsApp</h4><p class="tel">78 195 03 53</p></div>
+    <div><h4>Vente</h4><p>Poulets de chair et œufs</p></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
